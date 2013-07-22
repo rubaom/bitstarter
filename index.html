@@ -222,17 +222,17 @@
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+Generally avoid extreme colors (pure black/white/blue/red/green) and sharp gradients. Go with gradual gradients.
+If you can't draw, use Google Fonts and iconfinder to do "font-based design". That is, pick a pair of nice fonts (here's a sample pairing page). Then minimize the use of bitmap/raster graphics, and go with fonts and vector icons throughout the site. You'll find that this imposes interesting constraints and gives a definite geometric look to the site that can be complemented with a bit of raster at a later date.
+Try to line things up along vertical edges (as per the Non-Designer's Design Guide).
+Don't strive for the design to be pixel perfect in every intermediate shape. Just see that it looks reasonably good on a laptop, a tablet, and a phone.
+Use lorem ipsum and http://placehold.it fairly liberally.
+For best compatibility with responsive designs, only use percentages for padding/margin, rather than absolute px.
+If you do use padding, don't pad horizontally as this will often mess up the grid.
+Get things looking reasonably nice in one perspective (e.g. desktop). Then resize your browser window and view it with a tablet or smartphone User Agent. If you need to make a few tweaks, that's fine, but keep them scoped within @media queries as shown.
+Using .row-fluid within a .container actually gives a reasonably good experience; as noted here ("You can use row-fluid inside a container to get a 12-column (nestable) fluid grid within a pseudo-fixed-width, centred container that steps down in size as the window resizes. This is the best way to achieve a resizable layout.")
+It's a lot easier to design optimally for a few key widths (Macbook width, iPad landscape/portrait, iPhone landscape/portrait). Even if things don't look perfect between widths, that could be ok if you don't have extremely high polish requirements (and before you have revenue/profit, you probably don't have such requirements). Make sure the site never looks outright broken with intermediate widths, but otherwise don't micro-optimize.
+If you are doing a serious design, it's a good idea to pseudo-namespace your CSS to avoid inadvertent (and hard to debug) collisions. We'l introduce some techniques to help automate this in the future, but for now you can just use a prefix (e.g. 'myappname-statistics' rather than 'statistics' for the CSS classes).
           </p>
         </div>
         <div class="span5 asset">
@@ -256,7 +256,7 @@
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Frequently Asked Question.
+                    Frequently or Unfrequently Asked Question.
                   </div>
                 </div>
               </div>
